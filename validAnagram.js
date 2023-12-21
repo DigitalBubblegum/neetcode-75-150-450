@@ -4,9 +4,10 @@
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
-  const a = s.split("").sort().join("");
-  const b = t.split("").sort().join("");
-  if (a === b) {
+  if (s.length !== t.length) {
+    return false;
+  }
+  if (s.split("").sort().join("") === t.split("").sort().join("")) {
     return true;
   }
   return false;
